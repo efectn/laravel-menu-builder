@@ -1,5 +1,5 @@
 <?php 
-namespace Harimayco\Menu\Facades;
+namespace Efectn\Menu\Facades;
 use Illuminate\Support\Facades\Facade;
 
 class Menu extends Facade {
@@ -9,6 +9,6 @@ class Menu extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'harimayco-menu';
+        return 'menu-builder';
     }
 }

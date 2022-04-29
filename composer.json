@@ -1,12 +1,18 @@
 {
     "name": "efectn/laravel-menu-builder",
-    "description": "drag and drop menu generator like wordpress for laravel 5",
-    "keywords": ["Laravel", "Menu", "Wordpress", "Builder"],
+    "description": " Wordpress like drag & drop menu builder for Laravel 9.x ",
+    "keywords": ["Laravel", "Menu", "Wordpress", "Builder", "Drag and Drop"],
     "authors": [
+        {
+            "name": "Muhammed Efe Çetin",
+            "email": "efectn@protonmail.com",
+            "homepage": "https://6tel.net",
+            "role": "Maintainer"
+        },
     	{
             "name": "Rendy Harimayco",
             "email": "rendyharimayco@gmail.com",
-            "role": "Developer"
+            "role": "Original Developer"
         },
         {
             "name": "Cristian Garcia",
@@ -15,21 +21,21 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "illuminate/support": "5.* || 6.* || 7.* || 8.*"
+        "php": ">=8.0",
+        "illuminate/translation": "~9"
     },
     "autoload": {
         "psr-4": {
-          "Harimayco\\Menu\\": "src/"
+          "Efectn\\Menu\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Harimayco\\Menu\\MenuServiceProvider"
+                "Efectn\\Menu\\MenuServiceProvider"
             ],
             "aliases": {
-                "Menu": "Harimayco\\Menu\\Facades\\Menu"
+                "Menu": "Efectn\\Menu\\Facades\\Menu"
             }
         }
     },

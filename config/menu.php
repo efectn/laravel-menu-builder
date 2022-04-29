@@ -14,7 +14,7 @@ return [
     'table_name_items' => 'menu_items',
 
 /* you can set your route path*/
-    'route_path' => '/harimayco/',
+    'route_path' => '/menu-builder/',
 
 /* here you can make menu items visible to specific roles */
     'use_roles' => false,

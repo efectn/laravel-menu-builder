@@ -1,13 +1,13 @@
 <?php
 
-namespace Harimayco\Menu;
+namespace Efectn\Menu;
 
 use App\Http\Requests;
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
+use Efectn\Menu\Models\Menus;
+use Efectn\Menu\Models\MenuItems;
 use Illuminate\Support\Facades\DB;
 
-class WMenu
+class MenuBuilder
 {
 
     public function render()
@@ -20,7 +20,7 @@ class WMenu
         //$roles = Role::all();
 
         if ((request()->has("action") && empty(request()->input("menu"))) || request()->input("menu") == '0') {
-            return view('wmenu::menu-html')->with("menulist" , $menulist);
+            return view('menu-builder::menu-html')->with("menulist" , $menulist);
         } else {
 
             $menu = Menus::find(request()->input("menu"));
@@ -32,14 +32,14 @@ class WMenu
                 $data['role_pk'] = config('menu.roles_pk');
                 $data['role_title_field'] = config('menu.roles_title_field');
             }
-            return view('wmenu::menu-html', $data);
+            return view('menu-builder::menu-html', $data);
         }
 
     }
 
     public function scripts()
     {
-        return view('wmenu::scripts');
+        return view('menu-builder::scripts');
     }
 
     public function select($name = "menu", $menulist = array())

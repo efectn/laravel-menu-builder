@@ -1,38 +1,29 @@
-# Laravel Drag and Drop menu editor like wordpress
+# Drag and Drop Menu Builder for Laravel 9.x
 
-### *This package is abandoned: I'm not maintaining this package anymore, please contact me if you want to take over this project or feel free to fork and make your own. Thank you 
+[![Latest Stable Version](https://poser.pugx.org/efectn/laravel-menu-builder/v/stable)](https://packagist.org/packages/efectn/laravel-menu-builder) [![Latest Unstable Version](https://poser.pugx.org/efectn/laravel-menu-builder/v/unstable)](https://packagist.org/packages/efectn/laravel-menu-builder) [![Total Downloads](https://poser.pugx.org/efectn/laravel-menu-builder/downloads)](https://packagist.org/packages/efectn/laravel-menu-builder) [![Monthly Downloads](https://poser.pugx.org/efectn/laravel-menu-builder/d/monthly)](https://packagist.org/packages/efectn/laravel-menu-builder)
 
-[![Latest Stable Version](https://poser.pugx.org/harimayco/laravel-menu/v/stable)](https://packagist.org/packages/harimayco/laravel-menu) [![Latest Unstable Version](https://poser.pugx.org/harimayco/laravel-menu/v/unstable)](https://packagist.org/packages/harimayco/laravel-menu) [![Total Downloads](https://poser.pugx.org/harimayco/laravel-menu/downloads)](https://packagist.org/packages/harimayco/laravel-menu) [![Monthly Downloads](https://poser.pugx.org/harimayco/laravel-menu/d/monthly)](https://packagist.org/packages/harimayco/laravel-menu)
+Originally forked from [harimayco/wmenu-builder](https://github.com/harimayco/wmenu-builder), but under active maintenance. 
 
-forked from https://github.com/lordmacu/wmenu
-![Laravel drag and drop menu](https://raw.githubusercontent.com/harimayco/wmenu-builder/master/screenshot.png)
+![Laravel drag and drop menu](https://raw.githubusercontent.com/efectn/wmenu-builder/master/screenshot.png)
 
 ### Installation
 
 1. Run
 
 ```php
-composer require harimayco/laravel-menu
+composer require efectn/laravel-menu-builder
 ```
 
-**_Step 2 & 3 are optional if you are using laravel 5.5_**
-
-2. Add the following class, to "providers" array in the file config/app.php (optional on laravel 5.5)
+2. Add facade in the config/app.php (optional )
 
 ```php
-Harimayco\Menu\MenuServiceProvider::class,
+'Menu' => Efectn\Menu\Facades\Menu::class,
 ```
 
-3. add facade in the file config/app.php (optional on laravel 5.5)
+4. Run publish to get configs, views, assets and migrations.
 
 ```php
-'Menu' => Harimayco\Menu\Facades\Menu::class,
-```
-
-4. Run publish
-
-```php
-php artisan vendor:publish --provider="Harimayco\Menu\MenuServiceProvider"
+php artisan vendor:publish --provider="Efectn\Menu\MenuServiceProvider"
 ```
 
 5. Configure (optional) in **_config/menu.php_** :
@@ -73,8 +64,8 @@ On your view blade file
 Call the model class
 
 ```php
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
+use Efectn\Menu\Models\Menus;
+use Efectn\Menu\Models\MenuItems;
 
 ```
 
@@ -147,7 +138,7 @@ Now inside your blade template file place the menu using this simple example
 ### Get Menu Items By Menu ID
 
 ```php
-use Harimayco\Menu\Facades\Menu;
+use Efectn\Menu\Facades\Menu;
 ...
 /*
 Parameter: Menu ID
@@ -161,7 +152,7 @@ $menuList = Menu::get(1);
 In this example, you must have a menu named _Admin_
 
 ```php
-use Harimayco\Menu\Facades\Menu;
+use Efectn\Menu\Facades\Menu;
 ...
 /*
 Parameter: Menu ID
@@ -172,15 +163,16 @@ $menuList = Menu::getByName('Admin');
 
 ### Customization
 
-you can edit the menu interface in **_resources/views/vendor/wmenu/menu-html.blade.php_**
+you can edit the menu interface in **_resources/views/vendor/menu-builder/menu-html.blade.php_**
 
 ### Credits
 
-- [wmenu](https://github.com/lordmacu/wmenu) laravel package menu like wordpress
+- [wmenu](https://github.com/lordmacu/wmenu) - laravel package menu like wordpress
+- [wmenu-builder](https://github.com/harimayco/wmenu-builder) - Laravel Drag and Drop Dynamic Menu Generator (Wordpress look alike)
 
 ### Compatibility
 
-- Tested with laravel 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 6.x, 7.x
+- Tested with Laravel 9.x.
 
-### KNOWN ISSUES
-- Not working with RTL websites [#21](https://github.com/harimayco/wmenu-builder/issues/21) (pull requests are welcome)
+### Known Issues
+**Note:** Look at https://github.com/efectn/laravel-menu-builder/issues/1.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Harimayco\Menu;
+namespace Efectn\Menu;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
@@ -18,18 +18,18 @@ class MenuServiceProvider extends ServiceProvider
             require  __DIR__ . '/routes.php';
         }
 
-        $this->loadViewsFrom(__DIR__ . '/Views', 'wmenu');
+        $this->loadViewsFrom(__DIR__ . '/Views', 'menu-builder');
 
         $this->publishes([
             __DIR__ . '/../config/menu.php'  => config_path('menu.php'),
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/Views'   => resource_path('views/vendor/wmenu'),
+            __DIR__ . '/Views'   => resource_path('views/vendor/menu-builder'),
         ], 'view');
 
         $this->publishes([
-            __DIR__ . '/../assets' => public_path('vendor/harimayco-menu'),
+            __DIR__ . '/../assets' => public_path('vendor/menu-builder'),
         ], 'public');
 
         $this->publishes([
@@ -46,11 +46,11 @@ class MenuServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('harimayco-menu', function () {
-            return new WMenu();
+        $this->app->bind('menu-builder', function () {
+            return new MenuBuilder();
         });
 
-        $this->app->make('Harimayco\Menu\Controllers\MenuController');
+        $this->app->make('Efectn\Menu\Controllers\MenuController');
         $this->mergeConfigFrom(
             __DIR__ . '/../config/menu.php',
             'menu'
