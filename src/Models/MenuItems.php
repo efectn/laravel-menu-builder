@@ -17,11 +17,11 @@ class MenuItems extends Model
         $this->table = config('menu.table_prefix') . config('menu.table_name_items');
     }
 
-    public function getsons($id)
+    public function getSons($id)
     {
-        return $this->where("parent", $id)->get();
+        return $this->where("parent_id", $id)->get();
     }
-    public function getall($id)
+    public function getAll($id)
     {
         return $this->where("menu", $id)->orderBy("sort", "asc")->get();
     }
@@ -31,13 +31,13 @@ class MenuItems extends Model
         return self::where('menu', $menu)->max('sort') + 1;
     }
 
-    public function parent_menu()
+    public function parentMenu()
     {
-        return $this->belongsTo('Efectn\Menu\Models\Menus', 'menu');
+        return $this->belongsTo('Efectn\Menu\Models\Menus', 'menu_id');
     }
 
     public function child()
     {
-        return $this->hasMany('Efectn\Menu\Models\MenuItems', 'parent')->orderBy('sort', 'ASC');
+        return $this->hasMany('Efectn\Menu\Models\MenuItems', 'parent_id')->orderBy('sort', 'ASC');
     }
 }

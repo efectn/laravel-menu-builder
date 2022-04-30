@@ -2,7 +2,6 @@
 
 namespace Efectn\Menu;
 
-use App\Http\Requests;
 use Efectn\Menu\Models\Menus;
 use Efectn\Menu\Models\MenuItems;
 use Illuminate\Support\Facades\DB;
@@ -13,28 +12,25 @@ class MenuBuilder
     public function render()
     {
         $menu = new Menus();
-        $menuitems = new MenuItems();
-        $menulist = $menu->select(['id', 'name'])->get();
-        $menulist = $menulist->pluck('name', 'id')->prepend('Select menu', 0)->all();
-
-        //$roles = Role::all();
+        $menuItems = new MenuItems();
+        $menuList = $menu->select(['id', 'name'])->get();
+        $menuList = $menuList->pluck('name', 'id')->prepend('Select menu', 0)->all();
 
         if ((request()->has("action") && empty(request()->input("menu"))) || request()->input("menu") == '0') {
-            return view('menu-builder::menu-html')->with("menulist" , $menulist);
-        } else {
-
-            $menu = Menus::find(request()->input("menu"));
-            $menus = $menuitems->getall(request()->input("menu"));
-
-            $data = ['menus' => $menus, 'indmenu' => $menu, 'menulist' => $menulist];
-            if( config('menu.use_roles')) {
-                $data['roles'] = DB::table(config('menu.roles_table'))->select([config('menu.roles_pk'),config('menu.roles_title_field')])->get();
-                $data['role_pk'] = config('menu.roles_pk');
-                $data['role_title_field'] = config('menu.roles_title_field');
-            }
-            return view('menu-builder::menu-html', $data);
+            return view('menu-builder::menu-html')->with("menulist" , $menuList);
         }
 
+        $menu = Menus::find(request()->input("menu"));
+        $menus = $menuItems->getAll(request()->input("menu"));
+
+        $data = ['menus' => $menus, 'indmenu' => $menu, 'menulist' => $menuList];
+        if( config('menu.use_roles')) {
+            $data['roles'] = DB::table(config('menu.roles_table'))->select([config('menu.roles_pk'),config('menu.roles_title_field')])->get();
+            $data['role_pk'] = config('menu.roles_pk');
+            $data['role_title_field'] = config('menu.roles_title_field');
+        }
+
+        return view('menu-builder::menu-html', $data);
     }
 
     public function scripts()
@@ -76,7 +72,7 @@ class MenuBuilder
         $menuItem = new MenuItems;
         $menu_list = $menuItem->getall($menu_id);
 
-        $roots = $menu_list->where('menu', (integer) $menu_id)->where('parent', 0);
+        $roots = $menu_list->where('menu_id', (integer) $menu_id)->where('parent_id', 0);
 
         $items = self::tree($roots, $menu_list);
         return $items;
@@ -88,7 +84,7 @@ class MenuBuilder
         $i = 0;
         foreach ($items as $item) {
             $data_arr[$i] = $item->toArray();
-            $find = $all_items->where('parent', $item->id);
+            $find = $all_items->where('parent_id', $item->id);
 
             $data_arr[$i]['child'] = array();
 

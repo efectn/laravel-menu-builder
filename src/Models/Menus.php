@@ -21,6 +21,6 @@ class Menus extends Model
 
     public function items()
     {
-        return $this->hasMany('Efectn\Menu\Models\MenuItems', 'menu')->with('child')->where('parent', 0)->orderBy('sort', 'ASC');
+        return $this->hasMany('Efectn\Menu\Models\MenuItems', 'menu_id')->with('child')->where('parent_id', 0)->orderBy('sort', 'ASC');
     }
 }

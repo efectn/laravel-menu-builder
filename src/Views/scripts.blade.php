@@ -12,12 +12,12 @@
 		"subMenuFocus" : "%1$s. Menu of subelement %2$d of %3$s."
 	};
 	var arraydata = [];     
-	var addcustommenur= '{{ route("haddcustommenu") }}';
-	var updateitemr= '{{ route("hupdateitem")}}';
-	var generatemenucontrolr= '{{ route("hgeneratemenucontrol") }}';
-	var deleteitemmenur= '{{ route("hdeleteitemmenu") }}';
-	var deletemenugr= '{{ route("hdeletemenug") }}';
-	var createnewmenur= '{{ route("hcreatenewmenu") }}';
+	var addcustommenur= '{{ route("menus.items.create") }}';
+	var updateitemr= '{{ route("menus.items.update")}}';
+	var generatemenucontrolr= '{{ route("menus.update") }}';
+	var deleteitemmenur= '{{ route("menus.items.delete") }}';
+	var deletemenugr= '{{ route("menus.delete") }}';
+	var createnewmenur= '{{ route("menus.create") }}';
 	var csrftoken="{{ csrf_token() }}";
 	var menuwr = "{{ url()->current() }}";
 
