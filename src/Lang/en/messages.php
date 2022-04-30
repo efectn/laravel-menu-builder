@@ -13,8 +13,8 @@ return [
     "move_out_from" => "Out from under %s",
     "under" => "Under %s",
     "out_from" => "Out from %s",
-    "menu_focus" => "%1$s. Element menu %2$d of %3$d.",
-    "submenu_focus"=> "%1$s. Menu of subelement %2$d of %3$s.",
+    "menu_focus" => "%1\$s. Element menu %2\$d of %3\$d.",
+    "submenu_focus"=> "%1\$s. Menu of subelement %2\$d of %3\$s.",
     "select_menu_edit" => "Select the menu you want to edit:",
     "create_new_menu" => "Create new menu",
     "custom_link" => "Custom Link",
@@ -37,6 +37,5 @@ return [
     "cancel" => "Cancel",
     "update_item" => "Update Item",
     "delete_menu" => "Delete Menu",
-    "save_menu" => "Save Menu",
     "move" => "Move",
 ];
