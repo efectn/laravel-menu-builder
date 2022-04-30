@@ -48,7 +48,7 @@ class MenuController extends Controller
                 $menuItem->sort = $value["sort"];
                 $menuItem->depth = $value["depth"];
                 if (config('menu.use_roles')) {
-                    $menuItem->role_id = request()->input("role_id");
+                    $menuItem->role_id = $value["role_id"];
                 }
                 $menuItem->save();
             }
