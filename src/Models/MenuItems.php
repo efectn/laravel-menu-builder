@@ -28,7 +28,7 @@ class MenuItems extends Model
 
     public static function getNextSortRoot($menu)
     {
-        return self::where('menu', $menu)->max('sort') + 1;
+        return self::where('menu_id', $menu)->max('sort') + 1;
     }
 
     public function parentMenu()
