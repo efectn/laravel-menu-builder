@@ -1,15 +1,15 @@
 <script>
 	var menus = {
 		"oneThemeLocationNoMenus" : "",
-		"moveUp" : "Move up",
-		"moveDown" : "Mover down",
-		"moveToTop" : "Move top",
-		"moveUnder" : "Move under of %s",
-		"moveOutFrom" : "Out from under  %s",
-		"under" : "Under %s",
-		"outFrom" : "Out from %s",
-		"menuFocus" : "%1$s. Element menu %2$d of %3$d.",
-		"subMenuFocus" : "%1$s. Menu of subelement %2$d of %3$s."
+		"moveUp" : @lang("menu-builder::move_up"),
+		"moveDown" : @lang("menu-builder::move_down"),
+		"moveToTop" : @lang("menu-builder::move_top"),
+		"moveUnder" : @lang("menu-builder::move_under"),
+		"moveOutFrom" : @lang("menu-builder::move_out_from"),
+		"under" : @lang("menu-builder::under"),
+		"outFrom" : @lang("menu-builder::out_from"),
+		"menuFocus" : @lang("menu-builder::menu_focus"),
+		"subMenuFocus" : @lang("menu-builder::submenu_focus")
 	};
 	var arraydata = [];     
 	var addcustommenur= '{{ route("menus.items.create") }}';
