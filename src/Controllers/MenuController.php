@@ -29,10 +29,10 @@ class MenuController extends Controller
             $menu = Menus::find(request()->input("id"));
             $menu->delete();
 
-            return json_encode(array("resp" => __("menu-builder::deleting_this_menu")));
+            return json_encode(array("resp" => __("menu-builder::messages.deleting_this_menu")));
         }
 
-        return json_encode(array("resp" => __("menu-builder::delete_all_items"), "error" => 1));
+        return json_encode(array("resp" => __("menu-builder::messages.delete_all_items"), "error" => 1));
     }
 
     public function updateMenu()

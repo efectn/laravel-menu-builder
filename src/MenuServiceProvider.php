@@ -20,7 +20,7 @@ class MenuServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__ . '/Views', 'menu-builder');
 
-        $this->loadTranslationsFrom(__DIR__ . '/lang', 'menu-builder');
+        $this->loadTranslationsFrom(__DIR__ . '/Lang', 'menu-builder');
         $this->publishes([
             __DIR__ . '/Lang' => base_path('lang/vendor/menu-builder'),
         ], 'trans');

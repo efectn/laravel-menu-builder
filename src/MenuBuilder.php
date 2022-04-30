@@ -14,7 +14,7 @@ class MenuBuilder
         $menu = new Menus();
         $menuItems = new MenuItems();
         $menuList = $menu->select(['id', 'name'])->get();
-        $menuList = $menuList->pluck('name', 'id')->prepend(__("menu-builder::select_menu"), 0)->all();
+        $menuList = $menuList->pluck('name', 'id')->prepend(__("menu-builder::messages.select_menu"), 0)->all();
 
         if ((request()->has("action") && empty(request()->input("menu"))) || request()->input("menu") == '0') {
             return view('menu-builder::menu-html')->with("menulist" , $menuList);
