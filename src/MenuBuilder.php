@@ -70,7 +70,7 @@ class MenuBuilder
     public static function get($menu_id)
     {
         $menuItem = new MenuItems;
-        $menu_list = $menuItem->getall($menu_id);
+        $menu_list = $menuItem->getAll($menu_id);
 
         $roots = $menu_list->where('menu_id', (integer) $menu_id)->where('parent_id', 0);
 
