@@ -20,6 +20,10 @@ class MenuBuilder
             return view('menu-builder::menu-html')->with("menulist" , $menuList);
         }
 
+        if(empty(request()?->input('menu'))) {
+            request()->merge(['menu' => Menus::first()->id]);
+        }
+
         $menu = Menus::find(request()->input("menu"));
         $menus = $menuItems->getAll(request()->input("menu"));
 
