@@ -38,4 +38,8 @@ return [
     "update_item" => "Update Item",
     "delete_menu" => "Delete Menu",
     "move" => "Move",
+    "enter_menu_name" => "Enter menu name",
+    "menu_label" => "Menu Label",
+    "or" => "or",
+    "choose" => "Choose",
 ];

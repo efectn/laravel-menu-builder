@@ -21,9 +21,9 @@ $currentUrl = url()->current();
                                     {!! Menu::select('menu', $menulist) !!}
 
                                     <span class="submit-btn">
-										<input type="submit" class="button-secondary" value="Choose">
+										<input type="submit" class="button-secondary" value="@lang("menu-builder::messages.choose")">
 									</span>
-                                    <span class="add-new-menu-action"> or <a
+                                    <span class="add-new-menu-action"> @lang("menu-builder::messages.or") <a
                                             href="{{ $currentUrl }}?action=edit&menu=0">@lang("menu-builder::messages.create_new_menu")</a>. </span>
                                 </form>
                             </div>
@@ -38,7 +38,7 @@ $currentUrl = url()->current();
                                               enctype="multipart/form-data">
                                             <div id="side-sortables" class="accordion-container">
                                                 <ul class="outer-border">
-                                                    <li class="control-section accordion-section  open add-page"
+                                                    <li class="control-section accordion-section open add-page"
                                                         id="add-page">
                                                         <h3 class="accordion-section-title hndle"
                                                             tabindex="0"> @lang("menu-builder::messages.custom_link")
@@ -54,7 +54,7 @@ $currentUrl = url()->current();
                                                                             <input id="custom-menu-item-url" name="url"
                                                                                    type="text"
                                                                                    class="menu-item-textbox "
-                                                                                   placeholder="url">
+                                                                                   placeholder="URL">
                                                                         </label>
                                                                     </p>
 
@@ -65,7 +65,7 @@ $currentUrl = url()->current();
                                                                             <input id="custom-menu-item-name"
                                                                                    name="label" type="text"
                                                                                    class="regular-text menu-item-textbox input-with-default-title"
-                                                                                   title="Label menu">
+                                                                                   title="@lang("menu-builder::messages.menu_label")">
                                                                         </label>
                                                                     </p>
 
@@ -116,7 +116,7 @@ $currentUrl = url()->current();
                                                             <span>@lang("menu-builder::messages.name")</span>
                                                             <input name="menu-name" id="menu-name" type="text"
                                                                    class="menu-name regular-text menu-item-textbox"
-                                                                   title="Enter menu name"
+                                                                   title="@lang("menu-builder::messages.enter_menu_name")"
                                                                    value="@if(isset($indmenu)){{$indmenu->name}}@endif">
                                                             <input type="hidden" id="idmenu"
                                                                    value="@if(isset($indmenu)){{$indmenu->id}}@endif"/>
@@ -185,10 +185,10 @@ $currentUrl = url()->current();
                                                                                         class="item-order hide-if-js"> <a
                                                                                             href="{{ $currentUrl }}?action=move-up-menu-item&menu-item={{$m->id}}&_wpnonce=8b3eb7ac44"
                                                                                             class="item-move-up"><abbr
-                                                                                                title="Move Up">↑</abbr></a> | <a
+                                                                                                title="@lang("menu-builder::messages.move_up")">↑</abbr></a> | <a
                                                                                             href="{{ $currentUrl }}?action=move-down-menu-item&menu-item={{$m->id}}&_wpnonce=8b3eb7ac44"
                                                                                             class="item-move-down"><abbr
-                                                                                                title="Move Down">↓</abbr></a> </span> <a
+                                                                                                title="@lang("menu-builder::messages.move_down")">↓</abbr></a> </span> <a
                                                                                         class="item-edit"
                                                                                         id="edit-{{$m->id}}" title=" "
                                                                                         href="{{ $currentUrl }}?edit-menu-item={{$m->id}}#menu-item-settings-{{$m->id}}"> </a> </span>

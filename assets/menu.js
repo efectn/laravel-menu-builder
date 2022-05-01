@@ -162,7 +162,7 @@ function deleteitem(id) {
 }
 
 function deletemenu() {
-  var r = confirm('Do you want to delete this menu ?');
+  var r = confirm(menus.deleteMenu);
   if (r == true) {
     $.ajax({
       dataType: 'json',
@@ -209,7 +209,7 @@ function createnewmenu() {
       }
     });
   } else {
-    alert('Enter menu name!');
+    alert(menus.enterMenuName);
     $('#menu-name').focus();
     return false;
   }
