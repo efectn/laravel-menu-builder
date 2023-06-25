@@ -23,7 +23,7 @@ composer require devysm/laravel-menu-builder
 4. Run publish to get configs, views, assets and migrations.
 
 ```php
-php artisan vendor:publish --provider="Efectn\Menu\MenuServiceProvider"
+php artisan vendor:publish --provider="DevYSM\Menu\MenuServiceProvider"
 ```
 
 5. Configure (optional) in **_config/menu.php_** :
