@@ -4,6 +4,12 @@
     "keywords": ["Laravel", "Menu", "Wordpress", "Builder", "Drag and Drop"],
     "authors": [
         {
+            "name": "Yassen Sayed",
+            "email": "devysm2019@gmail.com",
+            "homepage": "www.yassensayed.com",
+            "role": "Maintainer"
+        },
+        {
             "name": "Muhammed Efe Çetin",
             "email": "efectn@protonmail.com",
             "homepage": "https://6tel.net",
@@ -21,7 +27,7 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "illuminate/translation": "~9"
     },
     "autoload": {
