@@ -1,9 +1,9 @@
 <?php
 
-namespace Efectn\Menu;
+namespace DevYSM\Menu;
 
-use Efectn\Menu\Models\Menus;
-use Efectn\Menu\Models\MenuItems;
+use DevYSM\Menu\Models\Menus;
+use DevYSM\Menu\Models\MenuItems;
 use Illuminate\Support\Facades\DB;
 
 class MenuBuilder

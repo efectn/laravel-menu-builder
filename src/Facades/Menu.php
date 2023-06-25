@@ -1,5 +1,5 @@
 <?php 
-namespace Efectn\Menu\Facades;
+namespace DevYSM\Menu\Facades;
 use Illuminate\Support\Facades\Facade;
 
 class Menu extends Facade {

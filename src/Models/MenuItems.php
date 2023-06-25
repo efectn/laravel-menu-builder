@@ -1,6 +1,6 @@
 <?php
 
-namespace Efectn\Menu\Models;
+namespace DevYSM\Menu\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -33,11 +33,11 @@ class MenuItems extends Model
 
     public function parentMenu()
     {
-        return $this->belongsTo('Efectn\Menu\Models\Menus', 'menu_id');
+        return $this->belongsTo('DevYSM\Menu\Models\Menus', 'menu_id');
     }
 
     public function child()
     {
-        return $this->hasMany('Efectn\Menu\Models\MenuItems', 'parent_id')->orderBy('sort', 'ASC');
+        return $this->hasMany('DevYSM\Menu\Models\MenuItems', 'parent_id')->orderBy('sort', 'ASC');
     }
 }

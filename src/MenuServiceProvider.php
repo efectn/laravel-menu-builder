@@ -1,6 +1,6 @@
 <?php
 
-namespace Efectn\Menu;
+namespace DevYSM\Menu;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
@@ -55,7 +55,7 @@ class MenuServiceProvider extends ServiceProvider
             return new MenuBuilder();
         });
 
-        $this->app->make('Efectn\Menu\Controllers\MenuController');
+        $this->app->make('DevYSM\Menu\Controllers\MenuController');
         $this->mergeConfigFrom(
             __DIR__ . '/../config/menu.php',
             'menu'
