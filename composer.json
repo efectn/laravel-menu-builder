@@ -35,6 +35,7 @@
           "DevYSM\\Menu\\": "src/"
         }
     },
+    "license": "MIT",
     "extra": {
         "laravel": {
             "providers": [
