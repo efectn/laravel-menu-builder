@@ -42,9 +42,9 @@ class MenuBuilder
         return view('menu-builder::scripts');
     }
 
-    public function select($name = "menu", $menulist = array())
+    public function select($name = "menu", $menulist = array(),string $custom_class='')
     {
-        $html = '<select name="' . $name . '">';
+        $html = '<select class="'.$custom_class.'" name="' . $name . '">';
 
         foreach ($menulist as $key => $val) {
             $active = '';
