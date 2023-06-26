@@ -11,7 +11,7 @@ Originally forked from [harimayco/wmenu-builder](https://github.com/harimayco/wm
 1. Run
 
 ```php
-composer require devysm/laravel-menu-builder
+composer require devysm/laravel-menu-builder:dev-master
 ```
 
 2. Add facade in the config/app.php (optional )
