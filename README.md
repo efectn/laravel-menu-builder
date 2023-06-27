@@ -11,7 +11,7 @@ Originally forked from [harimayco/wmenu-builder](https://github.com/harimayco/wm
 1. Run
 
 ```php
-composer require devysm/laravel-menu-builder:dev-master
+composer require devysm/laravel-menu-builder
 ```
 
 2. Add facade in the config/app.php (optional )
@@ -172,7 +172,7 @@ you can edit the menu interface in **_resources/views/vendor/menu-builder/menu-h
 
 ### Compatibility
 
-- Tested with Laravel 9.x.
+- Tested with Laravel 10.x.
 
 ### Known Issues
 **Note:** Look at https://github.com/DevYSM/laravel-menu-builder/issues/1.
