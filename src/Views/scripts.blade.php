@@ -10,7 +10,8 @@
         "outFrom": '{{__("menu-builder::messages.out_from")}}',
         "menuFocus": '{{__("menu-builder::messages.menu_focus")}}',
         "deleteMenu": '{{__("menu-builder::messages.deleting_this_menu")}}',
-        "enterMenuName": '{{__("menu-builder::messages.enter_menu_name")}}'
+        "enterMenuName": '{{__("menu-builder::messages.enter_menu_name")}}',
+        "subMenuFocus" : '{{__("menu-builder::messages.submenu_focus")}}'
     };
     var arraydata = [];
     var addcustommenur = '{{ route("menus.items.create") }}';
