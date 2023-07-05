@@ -1,29 +1,29 @@
 # Drag and Drop Menu Builder for Laravel 9.x
 
-[![Latest Stable Version](https://poser.pugx.org/efectn/laravel-menu-builder/v/stable)](https://packagist.org/packages/efectn/laravel-menu-builder) [![Latest Unstable Version](https://poser.pugx.org/efectn/laravel-menu-builder/v/unstable)](https://packagist.org/packages/efectn/laravel-menu-builder) [![Total Downloads](https://poser.pugx.org/efectn/laravel-menu-builder/downloads)](https://packagist.org/packages/efectn/laravel-menu-builder) [![Monthly Downloads](https://poser.pugx.org/efectn/laravel-menu-builder/d/monthly)](https://packagist.org/packages/efectn/laravel-menu-builder)
+[![Latest Stable Version](https://poser.pugx.org/DevYSM/laravel-menu-builder/v/stable)](https://packagist.org/packages/DevYSM/laravel-menu-builder) [![Latest Unstable Version](https://poser.pugx.org/DevYSM/laravel-menu-builder/v/unstable)](https://packagist.org/packages/DevYSM/laravel-menu-builder) [![Total Downloads](https://poser.pugx.org/DevYSM/laravel-menu-builder/downloads)](https://packagist.org/packages/DevYSM/laravel-menu-builder) [![Monthly Downloads](https://poser.pugx.org/DevYSM/laravel-menu-builder/d/monthly)](https://packagist.org/packages/DevYSM/laravel-menu-builder)
 
 Originally forked from [harimayco/wmenu-builder](https://github.com/harimayco/wmenu-builder), but under active maintenance. 
 
-![Laravel drag and drop menu](https://raw.githubusercontent.com/efectn/wmenu-builder/master/screenshot.png)
+![Laravel drag and drop menu](https://raw.githubusercontent.com/DevYSM/wmenu-builder/master/screenshot.png)
 
 ### Installation
 
 1. Run
 
 ```php
-composer require efectn/laravel-menu-builder
+composer require devysm/laravel-menu-builder
 ```
 
 2. Add facade in the config/app.php (optional )
 
 ```php
-'Menu' => Efectn\Menu\Facades\Menu::class,
+'Menu' => DevYSM\Menu\Facades\Menu::class,
 ```
 
 4. Run publish to get configs, views, assets and migrations.
 
 ```php
-php artisan vendor:publish --provider="Efectn\Menu\MenuServiceProvider"
+php artisan vendor:publish --provider="DevYSM\Menu\MenuServiceProvider"
 ```
 
 5. Configure (optional) in **_config/menu.php_** :
@@ -64,8 +64,8 @@ On your view blade file
 Call the model class
 
 ```php
-use Efectn\Menu\Models\Menus;
-use Efectn\Menu\Models\MenuItems;
+use DevYSM\Menu\Models\Menus;
+use DevYSM\Menu\Models\MenuItems;
 
 ```
 
@@ -138,7 +138,7 @@ Now inside your blade template file place the menu using this simple example
 ### Get Menu Items By Menu ID
 
 ```php
-use Efectn\Menu\Facades\Menu;
+use DevYSM\Menu\Facades\Menu;
 ...
 /*
 Parameter: Menu ID
@@ -152,7 +152,7 @@ $menuList = Menu::get(1);
 In this example, you must have a menu named _Admin_
 
 ```php
-use Efectn\Menu\Facades\Menu;
+use DevYSM\Menu\Facades\Menu;
 ...
 /*
 Parameter: Menu ID
@@ -172,7 +172,7 @@ you can edit the menu interface in **_resources/views/vendor/menu-builder/menu-h
 
 ### Compatibility
 
-- Tested with Laravel 9.x.
+- Tested with Laravel 10.x.
 
 ### Known Issues
-**Note:** Look at https://github.com/efectn/laravel-menu-builder/issues/1.
+**Note:** Look at https://github.com/DevYSM/laravel-menu-builder/issues/1.

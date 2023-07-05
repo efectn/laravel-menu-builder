@@ -1,12 +1,12 @@
 <?php
 
-namespace Efectn\Menu\Controllers;
+namespace DevYSM\Menu\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Efectn\Menu\Models\Menus;
-use Efectn\Menu\Models\MenuItems;
+use DevYSM\Menu\Models\Menus;
+use DevYSM\Menu\Models\MenuItems;
 
 class MenuController extends Controller
 {

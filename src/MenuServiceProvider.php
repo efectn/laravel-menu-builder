@@ -1,6 +1,6 @@
 <?php
 
-namespace Efectn\Menu;
+namespace DevYSM\Menu;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
@@ -40,7 +40,7 @@ class MenuServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../migrations/2017_08_11_073824_create_menus_wp_table.php' => database_path('migrations/2017_08_11_073824_create_menus_wp_table.php'),
             __DIR__ . '/../migrations/2017_08_11_074006_create_menu_items_wp_table.php' => database_path('migrations/2017_08_11_074006_create_menu_items_wp_table.php'),
-            __DIR__ . '/../migrations/2019_01_05_293551_add-role-id-to-menu-items-table.php' => database_path('2019_01_05_293551_add-role-id-to-menu-items-table.php'),
+            __DIR__ . '/../migrations/2019_01_05_293551_add-role-id-to-menu-items-table.php' => database_path('migrations/2019_01_05_293551_add_role_id_to_menu_items_table.php'),
         ], 'migrations');
     }
 
@@ -55,7 +55,7 @@ class MenuServiceProvider extends ServiceProvider
             return new MenuBuilder();
         });
 
-        $this->app->make('Efectn\Menu\Controllers\MenuController');
+        $this->app->make('DevYSM\Menu\Controllers\MenuController');
         $this->mergeConfigFrom(
             __DIR__ . '/../config/menu.php',
             'menu'

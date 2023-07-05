@@ -1,11 +1,17 @@
 {
-    "name": "efectn/laravel-menu-builder",
+    "name": "devysm/laravel-menu-builder",
     "description": " Wordpress like drag & drop menu builder for Laravel 9.x ",
     "keywords": ["Laravel", "Menu", "Wordpress", "Builder", "Drag and Drop"],
     "authors": [
         {
+            "name": "Yassen Sayed",
+            "email": "devysm2019@gmail.com",
+            "homepage": "https://www.yassensayed.com",
+            "role": "Maintainer"
+        },
+        {
             "name": "Muhammed Efe Çetin",
-            "email": "efectn@protonmail.com",
+            "email": "DevYSM@protonmail.com",
             "homepage": "https://6tel.net",
             "role": "Maintainer"
         },
@@ -21,21 +27,22 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
-        "illuminate/translation": "~9"
+        "php": "~5.4|~5.5|5.6|~7.0|~7.1|^7.2|^7.3|^7.4|^8.0|^8.1",
+        "illuminate/support": "~5.5.40|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0|^9.0|^10.0"
     },
     "autoload": {
         "psr-4": {
-          "Efectn\\Menu\\": "src/"
+          "DevYSM\\Menu\\": "src/"
         }
     },
+    "license": "MIT",
     "extra": {
         "laravel": {
             "providers": [
-                "Efectn\\Menu\\MenuServiceProvider"
+                "DevYSM\\Menu\\MenuServiceProvider"
             ],
             "aliases": {
-                "Menu": "Efectn\\Menu\\Facades\\Menu"
+                "Menu": "DevYSM\\Menu\\Facades\\Menu"
             }
         }
     },
