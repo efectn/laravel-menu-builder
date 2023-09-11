@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": ">=8.0",
-        "illuminate/translation": "~9"
+        "illuminate/translation": "~9 || ~10"
     },
     "autoload": {
         "psr-4": {
